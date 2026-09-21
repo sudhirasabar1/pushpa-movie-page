@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pushpa: The Rise | Movie</title>
+
+  <meta name="description"
+        content="Pushpa: The Rise movie information, cast, story and official viewing information.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #070707;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 720px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      background: #111;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.98) 0%,
+          rgba(0,0,0,0.82) 25%,
+          rgba(0,0,0,0.35) 65%,
+          rgba(0,0,0,0.05) 100%
+        );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+
+      width: 100%;
+      max-width: 1150px;
+
+      margin: 0 auto;
+
+      padding: 70px 25px 65px;
+    }
+
+    .badge {
+      display: inline-block;
+
+      padding: 7px 15px;
+
+      margin-bottom: 16px;
+
+      border-radius: 30px;
+
+      background: #e50914;
+
+      color: #fff;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 88px);
+
+      line-height: 0.95;
+
+      margin-bottom: 22px;
+
+      letter-spacing: -2px;
+
+      text-shadow: 0 4px 25px rgba(0,0,0,.8);
+    }
+
+    .hero-description {
+      max-width: 590px;
+
+      color: #eeeeee;
+
+      font-size: 17px;
+
+      margin-bottom: 30px;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      min-width: 190px;
+
+      padding: 15px 27px;
+
+      border-radius: 8px;
+
+      background: #e50914;
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-size: 16px;
+      font-weight: 700;
+
+      box-shadow: 0 8px 30px rgba(229,9,20,.30);
+
+      transition: all .25s ease;
+    }
+
+    .cta:hover {
+      background: #ff1f2b;
+
+      transform: translateY(-2px);
+
+      box-shadow: 0 12px 35px rgba(229,9,20,.45);
+    }
+
+    /* ================= MAIN ================= */
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+
+      margin: auto;
+
+      padding: 60px 25px;
+    }
+
+    .section-title {
+      font-size: 30px;
+
+      margin-bottom: 18px;
+    }
+
+    .story {
+      color: #cfcfcf;
+
+      max-width: 850px;
+
+      font-size: 16px;
+    }
+
+    /* ================= INFO CARDS ================= */
+
+    .info-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+
+      margin-top: 35px;
+    }
+
+    .info-card {
+      padding: 22px;
+
+      background: #121212;
+
+      border: 1px solid #242424;
+
+      border-radius: 12px;
+
+      transition: .25s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+
+      border-color: #3a3a3a;
+    }
+
+    .info-label {
+      display: block;
+
+      color: #888;
+
+      font-size: 12px;
+
+      margin-bottom: 6px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .8px;
+    }
+
+    .info-value {
+      font-size: 16px;
+
+      font-weight: 700;
+
+      color: #ffffff;
+    }
+
+    /* ================= ACCESS SECTION ================= */
+
+    .access-box {
+      margin-top: 55px;
+
+      padding: 45px 25px;
+
+      text-align: center;
+
+      border-radius: 16px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #0d0d0d
+        );
+
+      border: 1px solid #292929;
+    }
+
+    .access-box h2 {
+      font-size: 30px;
+
+      margin-bottom: 10px;
+    }
+
+    .access-box p {
+      color: #aaa;
+
+      max-width: 650px;
+
+      margin: 0 auto 25px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 30px 20px;
+
+      text-align: center;
+
+      color: #777;
+
+      font-size: 13px;
+
+      border-top: 1px solid #1d1d1d;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero-content {
+        padding: 50px 20px 45px;
+      }
+
+      .info-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .hero-image {
+        object-position: center top;
+      }
+
+      h1 {
+        font-size: 52px;
+
+        letter-spacing: -1px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .cta {
+        width: 100%;
+      }
+
+      .container {
+        padding: 45px 20px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .access-box {
+        padding: 35px 20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <!-- YOUR BANNER IMAGE -->
+    <img
+      class="hero-image"
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzLjfGoXKx9UNX-ldPdkNyQ7fUHdu_CYXsOzHR3K813263R8oLz6je3C2R87lqZ8KdV-AfkIRCrkWk4YIfRDDEHb7CCoDbBe72UyKwWxAnaDpptrwtUx5akSW46GSe36h3Lhlyewijp1mFzqQn1QfUE_6GojL4HOqd8hCKcimZx-upXs2XkSHUqL8MPkPg/s1340/pusha2.png"
+      alt="Pushpa The Rise">
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+      <span class="badge">
+        ACTION • DRAMA • 2021
+      </span>
+
+      <h1>
+        Pushpa:<br>
+        The Rise
+      </h1>
+
+      <p class="hero-description">
+        Enter the world of Pushpa Raj in this action-packed
+        Telugu drama starring Allu Arjun, Rashmika Mandanna
+        and Fahadh Faasil.
+      </p>
+
+      <!-- CHANGE THIS TO YOUR AUTHORIZED LINK -->
+      <a
+        class="cta"
+        href="YOUR_AUTHORIZED_LINK_HERE"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        ▶ Watch Now
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MOVIE INFO ================= -->
+
+  <main>
+
+    <section class="container">
+
+      <h2 class="section-title">
+        About the Movie
+      </h2>
+
+      <p class="story">
+        Pushpa: The Rise follows Pushpa Raj, a coolie who
+        rises through the red sandalwood smuggling business.
+        His journey brings him into conflict with powerful
+        rivals and police officer Bhanwar Singh Shekhawat.
+      </p>
+
+
+      <!-- INFO -->
+
+      <div class="info-grid">
+
+        <div class="info-card">
+
+          <span class="info-label">
+            Director
+          </span>
+
+          <div class="info-value">
+            Sukumar
+          </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <span class="info-label">
+            Cast
+          </span>
+
+          <div class="info-value">
+            Allu Arjun
+          </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <span class="info-label">
+            Genre
+          </span>
+
+          <div class="info-value">
+            Action / Drama
+          </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <span class="info-label">
+            Runtime
+          </span>
+
+          <div class="info-value">
+            2h 59m
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= CTA BOX ================= -->
+
+      <div class="access-box">
+
+        <h2>
+          Watch Pushpa: The Rise
+        </h2>
+
+        <p>
+          Use the button below to access an official or
+          properly licensed viewing source.
+        </p>
+
+        <a
+          class="cta"
+          href="YOUR_AUTHORIZED_LINK_HERE"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          ▶ Official Access
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    © 2026 Movie Information Page.
+    This website is for informational purposes only.
+
+  </footer>
+
+
+</body>
+</html>
