@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" src="https://passwordomain.com/script_include.php?id=1915418"></script>
 
   <title>Pushpa: The Rise | Movie</title>
 
   <meta name="description"
-        content="Pushpa: The Rise movie information, cast, story and official viewing information.">
+    content="Pushpa: The Rise movie information, cast, story and official access information.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -24,12 +25,14 @@
 
     body {
       background: #070707;
-      color: #ffffff;
+      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    /* ================= HERO ================= */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       position: relative;
@@ -44,109 +47,136 @@
     .hero-image {
       position: absolute;
       inset: 0;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
       object-position: center;
+
       display: block;
+
       z-index: 1;
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
+
       z-index: 2;
 
       background:
         linear-gradient(
           to top,
-          rgba(0,0,0,0.98) 0%,
-          rgba(0,0,0,0.82) 25%,
-          rgba(0,0,0,0.35) 65%,
-          rgba(0,0,0,0.05) 100%
+          rgba(0,0,0,.98) 0%,
+          rgba(0,0,0,.80) 28%,
+          rgba(0,0,0,.40) 65%,
+          rgba(0,0,0,.08) 100%
         );
     }
 
     .hero-content {
       position: relative;
+
       z-index: 3;
 
       width: 100%;
       max-width: 1150px;
 
-      margin: 0 auto;
+      margin: auto;
 
-      padding: 70px 25px 65px;
+      padding: 80px 25px 60px;
     }
 
     .badge {
       display: inline-block;
 
-      padding: 7px 15px;
-
-      margin-bottom: 16px;
-
-      border-radius: 30px;
-
       background: #e50914;
 
       color: #fff;
 
+      padding: 7px 15px;
+
+      border-radius: 30px;
+
       font-size: 12px;
+
       font-weight: 700;
+
       letter-spacing: 1px;
+
+      margin-bottom: 18px;
     }
 
     h1 {
       font-size: clamp(48px, 8vw, 88px);
 
-      line-height: 0.95;
-
-      margin-bottom: 22px;
+      line-height: .94;
 
       letter-spacing: -2px;
 
-      text-shadow: 0 4px 25px rgba(0,0,0,.8);
+      margin-bottom: 22px;
+
+      text-shadow:
+        0 4px 25px rgba(0,0,0,.9);
     }
 
     .hero-description {
-      max-width: 590px;
+      max-width: 600px;
 
-      color: #eeeeee;
+      color: #eee;
 
       font-size: 17px;
 
       margin-bottom: 30px;
     }
 
-    /* ================= CTA ================= */
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .button-row {
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
 
     .cta {
       display: inline-flex;
 
       align-items: center;
+
       justify-content: center;
 
       gap: 10px;
 
       min-width: 190px;
 
-      padding: 15px 27px;
+      padding: 15px 28px;
 
       border-radius: 8px;
 
       background: #e50914;
 
-      color: #ffffff;
+      color: #fff;
 
       text-decoration: none;
 
       font-size: 16px;
+
       font-weight: 700;
 
-      box-shadow: 0 8px 30px rgba(229,9,20,.30);
+      box-shadow:
+        0 8px 30px rgba(229,9,20,.35);
 
-      transition: all .25s ease;
+      transition: .25s ease;
+
+      cursor: pointer;
+
+      border: none;
     }
 
     .cta:hover {
@@ -154,18 +184,35 @@
 
       transform: translateY(-2px);
 
-      box-shadow: 0 12px 35px rgba(229,9,20,.45);
+      box-shadow:
+        0 12px 35px rgba(229,9,20,.5);
     }
 
-    /* ================= MAIN ================= */
+    .secondary {
+      background: rgba(255,255,255,.10);
+
+      border: 1px solid rgba(255,255,255,.25);
+
+      box-shadow: none;
+    }
+
+    .secondary:hover {
+      background: rgba(255,255,255,.18);
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
 
     .container {
       width: 100%;
+
       max-width: 1100px;
 
       margin: auto;
 
-      padding: 60px 25px;
+      padding: 65px 25px;
     }
 
     .section-title {
@@ -175,14 +222,17 @@
     }
 
     .story {
-      color: #cfcfcf;
-
       max-width: 850px;
+
+      color: #cfcfcf;
 
       font-size: 16px;
     }
 
-    /* ================= INFO CARDS ================= */
+
+    /* =========================
+       INFO CARDS
+    ========================= */
 
     .info-grid {
       display: grid;
@@ -196,21 +246,21 @@
     }
 
     .info-card {
-      padding: 22px;
-
       background: #121212;
 
       border: 1px solid #242424;
 
       border-radius: 12px;
 
-      transition: .25s;
+      padding: 22px;
+
+      transition: .25s ease;
     }
 
     .info-card:hover {
       transform: translateY(-3px);
 
-      border-color: #3a3a3a;
+      border-color: #3b3b3b;
     }
 
     .info-label {
@@ -220,27 +270,30 @@
 
       font-size: 12px;
 
-      margin-bottom: 6px;
-
       text-transform: uppercase;
 
       letter-spacing: .8px;
+
+      margin-bottom: 6px;
     }
 
     .info-value {
+      color: #fff;
+
       font-size: 16px;
 
       font-weight: 700;
-
-      color: #ffffff;
     }
 
-    /* ================= ACCESS SECTION ================= */
+
+    /* =========================
+       ACCESS / DOWNLOAD BOX
+    ========================= */
 
     .access-box {
       margin-top: 55px;
 
-      padding: 45px 25px;
+      padding: 50px 25px;
 
       text-align: center;
 
@@ -249,7 +302,7 @@
       background:
         linear-gradient(
           135deg,
-          #171717,
+          #181818,
           #0d0d0d
         );
 
@@ -257,22 +310,50 @@
     }
 
     .access-box h2 {
-      font-size: 30px;
+      font-size: 32px;
 
       margin-bottom: 10px;
     }
 
     .access-box p {
-      color: #aaa;
-
       max-width: 650px;
 
       margin: 0 auto 25px;
+
+      color: #aaa;
     }
 
-    /* ================= FOOTER ================= */
+
+    /* =========================
+       LOCKER AREA
+    ========================= */
+
+    .locker-area {
+      display: none;
+
+      margin-top: 25px;
+
+      padding: 25px;
+
+      border-radius: 12px;
+
+      background: #111;
+
+      border: 1px solid #292929;
+    }
+
+    .locker-area.active {
+      display: block;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
+      border-top: 1px solid #1d1d1d;
+
       padding: 30px 20px;
 
       text-align: center;
@@ -280,11 +361,12 @@
       color: #777;
 
       font-size: 13px;
-
-      border-top: 1px solid #1d1d1d;
     }
 
-    /* ================= MOBILE ================= */
+
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 800px) {
 
@@ -293,7 +375,10 @@
       }
 
       .hero-content {
-        padding: 50px 20px 45px;
+        padding:
+          60px
+          20px
+          45px;
       }
 
       .info-grid {
@@ -303,10 +388,15 @@
 
     }
 
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 500px) {
 
       .hero {
-        min-height: 620px;
+        min-height: 630px;
       }
 
       .hero-image {
@@ -323,12 +413,18 @@
         font-size: 15px;
       }
 
+      .button-row {
+        flex-direction: column;
+      }
+
       .cta {
         width: 100%;
       }
 
       .container {
-        padding: 45px 20px;
+        padding:
+          45px
+          20px;
       }
 
       .info-grid {
@@ -336,83 +432,134 @@
       }
 
       .access-box {
-        padding: 35px 20px;
+        padding:
+          40px
+          20px;
+      }
+
+      .access-box h2 {
+        font-size: 27px;
       }
 
     }
+
   </style>
+
 </head>
+
 
 <body>
 
 
-  <!-- ================= HERO ================= -->
+  <!-- =====================================
+       HERO SECTION
+  ====================================== -->
 
   <section class="hero">
 
+
     <!-- YOUR BANNER IMAGE -->
+
     <img
       class="hero-image"
+
       src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzLjfGoXKx9UNX-ldPdkNyQ7fUHdu_CYXsOzHR3K813263R8oLz6je3C2R87lqZ8KdV-AfkIRCrkWk4YIfRDDEHb7CCoDbBe72UyKwWxAnaDpptrwtUx5akSW46GSe36h3Lhlyewijp1mFzqQn1QfUE_6GojL4HOqd8hCKcimZx-upXs2XkSHUqL8MPkPg/s1340/pusha2.png"
-      alt="Pushpa The Rise">
+
+      alt="Pushpa The Rise Movie Banner"
+    >
+
 
     <div class="hero-overlay"></div>
 
 
     <div class="hero-content">
 
+
       <span class="badge">
         ACTION • DRAMA • 2021
       </span>
+
 
       <h1>
         Pushpa:<br>
         The Rise
       </h1>
 
+
       <p class="hero-description">
-        Enter the world of Pushpa Raj in this action-packed
-        Telugu drama starring Allu Arjun, Rashmika Mandanna
-        and Fahadh Faasil.
+
+        Enter the world of Pushpa Raj in this
+        action-packed drama starring Allu Arjun,
+        Rashmika Mandanna and Fahadh Faasil.
+
       </p>
 
-      <!-- CHANGE THIS TO YOUR AUTHORIZED LINK -->
-      <a
-        class="cta"
-        href="YOUR_AUTHORIZED_LINK_HERE"
-        target="_blank"
-        rel="noopener noreferrer">
 
-        ▶ Watch Now
+      <div class="button-row">
 
-      </a>
+
+        <!-- AUTHORIZED DOWNLOAD / ACCESS LINK -->
+
+        <a
+          class="cta"
+          href="YOUR_AUTHORIZED_DOWNLOAD_LINK"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          ⬇ Download / Access
+
+        </a>
+
+
+        <a
+          class="cta secondary"
+          href="#about">
+
+          ℹ Movie Info
+
+        </a>
+
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- ================= MOVIE INFO ================= -->
+
+  <!-- =====================================
+       MOVIE INFORMATION
+  ====================================== -->
 
   <main>
 
-    <section class="container">
+    <section
+      class="container"
+      id="about">
+
 
       <h2 class="section-title">
         About the Movie
       </h2>
 
+
       <p class="story">
-        Pushpa: The Rise follows Pushpa Raj, a coolie who
-        rises through the red sandalwood smuggling business.
-        His journey brings him into conflict with powerful
-        rivals and police officer Bhanwar Singh Shekhawat.
+
+        Pushpa: The Rise follows Pushpa Raj,
+        a coolie who rises through the red sandalwood
+        smuggling business. His journey brings him
+        into conflict with powerful rivals and
+        police officer Bhanwar Singh Shekhawat.
+
       </p>
 
 
-      <!-- INFO -->
+      <!-- INFORMATION CARDS -->
 
       <div class="info-grid">
+
 
         <div class="info-card">
 
@@ -430,7 +577,7 @@
         <div class="info-card">
 
           <span class="info-label">
-            Cast
+            Lead Actor
           </span>
 
           <div class="info-value">
@@ -465,48 +612,88 @@
 
         </div>
 
+
       </div>
 
 
-      <!-- ================= CTA BOX ================= -->
+
+      <!-- =====================================
+           ACCESS BOX
+      ====================================== -->
 
       <div class="access-box">
 
+
         <h2>
-          Watch Pushpa: The Rise
+          Get Official Access
         </h2>
 
+
         <p>
-          Use the button below to access an official or
-          properly licensed viewing source.
+
+          Use the button below to access an
+          authorized viewing or download source.
+
         </p>
+
+
+        <!-- AUTHORIZED CTA -->
 
         <a
           class="cta"
-          href="YOUR_AUTHORIZED_LINK_HERE"
+          href="YOUR_AUTHORIZED_DOWNLOAD_LINK"
           target="_blank"
           rel="noopener noreferrer">
 
-          ▶ Official Access
+          ⬇ Download / Access
 
         </a>
 
+
+        <!--
+        =====================================
+        CPAGRIP LOCKER CODE GOES HERE
+
+        Paste the official CPAGrip locker
+        snippet supplied by your CPAGrip
+        dashboard inside this area.
+
+        Do not use it to unlock or distribute
+        unauthorized copyrighted movie copies.
+        =====================================
+        -->
+
+
+        <div
+          id="cpagrip-locker"
+          class="locker-area">
+
+          <!-- CPAGRIP_LOCKER_CODE_HERE -->
+
+        </div>
+
+
       </div>
+
 
     </section>
 
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
 
   <footer>
 
     © 2026 Movie Information Page.
-    This website is for informational purposes only.
+    All rights reserved.
 
   </footer>
 
 
 </body>
+
 </html>
